@@ -168,6 +168,10 @@ strong { color: var(--ink); font-weight: 700; }
       aria-controls="panel-bksg" id="tab-bksg" onclick="switchTab('bksg')">
       Bookmark Suggestions
     </button>
+    <button class="tab-btn" role="tab" aria-selected="false"
+      aria-controls="panel-aip" id="tab-aip" onclick="switchTab('aip')">
+      AI Planner
+    </button>
   </div>
 </div>
 
@@ -604,6 +608,254 @@ strong { color: var(--ink); font-weight: 700; }
 
 </main>
 </div><!-- /panel-bksg -->
+
+<!-- ══════════════════════════════════════════════════════════
+     TAB 3 — AI Planner
+     ══════════════════════════════════════════════════════════ -->
+<div id="panel-aip" class="tab-panel" role="tabpanel" aria-labelledby="tab-aip">
+<main class="doc">
+
+  <h1 class="title">Privacy Policy</h1>
+  <p class="eff">Effective 20 June 2026<span class="s">|</span>Applies to AI Planner</p>
+
+  <p class="intro">AI Planner is an AI-powered daily, weekly &amp; monthly planner that
+    lives in your new tab and Chrome side panel. When you use optional features like
+    Gemini AI suggestions or Google account integration, data is sent to Google's servers.
+    This policy explains exactly what is shared, with whom, and why.</p>
+
+  <div class="fig">
+    <svg viewBox="0 0 440 180" fill="none" stroke="#5f6368" stroke-width="2" aria-hidden="true">
+      <rect x="100" y="30" width="240" height="120" rx="8"/>
+      <line x1="100" y1="54" x2="340" y2="54"/>
+      <circle cx="116" cy="42" r="2.4" fill="#5f6368" stroke="none"/>
+      <circle cx="127" cy="42" r="2.4" fill="#5f6368" stroke="none"/>
+      <circle cx="138" cy="42" r="2.4" fill="#5f6368" stroke="none"/>
+      <rect x="116" y="66" width="96" height="70" rx="4"/>
+      <rect x="224" y="66" width="96" height="32" rx="4"/>
+      <rect x="224" y="104" width="96" height="32" rx="4"/>
+      <path d="M34 90 c0 0 30 0 66 0" stroke-dasharray="3 6" stroke-linecap="round"/>
+      <path d="M94 84 100 90 94 96" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="34" y="80" font-size="10" fill="#80868b" font-family="sans-serif" text-anchor="middle">Gemini AI</text>
+      <text x="34" y="104" font-size="10" fill="#80868b" font-family="sans-serif" text-anchor="middle">Google APIs</text>
+      <path d="M34 100 c0 0 30 0 66 0" stroke-dasharray="3 6" stroke-linecap="round"/>
+    </svg>
+    <div class="figcap">Planner data stays local. AI &amp; Google features send only what's needed to Google's servers.</div>
+  </div>
+
+  <nav class="contents" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#c-intro">Introduction</a></li>
+      <li><a href="#c-collect">What we collect</a></li>
+      <li><a href="#c-how">How the extension works</a></li>
+      <li><a href="#c-permissions">Permissions we request</a></li>
+      <li><a href="#c-sharing">Sharing your information</a></li>
+      <li><a href="#c-security">Keeping it secure</a></li>
+      <li><a href="#c-delete">Deleting your data</a></li>
+      <li><a href="#c-children">Children's privacy</a></li>
+      <li><a href="#c-about">About this policy</a></li>
+      <li><a href="#c-contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="c-intro" class="sec" style="border-top:none;">
+    <h2>Introduction</h2>
+    <p class="sub">Core planner is private. AI and Google features connect to Google.</p>
+    <p>RightBonds built AI Planner so your daily journal, priorities, and goals are stored
+      locally on your device by default. Two optional features — Gemini AI suggestions and
+      Google account integration — require sending data to Google's servers. Both are
+      opt-in and clearly labelled inside the extension.</p>
+  </section>
+
+  <section id="c-collect" class="sec">
+    <h2>What we collect</h2>
+    <p class="sub">We collect nothing. Google receives data only when you use optional features.</p>
+
+    <p class="sub" style="font-size:16px;margin-top:20px;">Always — stored locally only</p>
+    <ul class="ul">
+      <li>Your planner entries: daily priorities, top tasks, goals, habits, schedule blocks, and journal notes</li>
+      <li>Your settings: theme, font, widget layout, Gemini API key (stored locally in Chrome storage)</li>
+    </ul>
+
+    <p class="sub" style="font-size:16px;margin-top:20px;">When you use Gemini AI (optional)</p>
+    <ul class="ul">
+      <li>The planner text you ask AI to help with (e.g. priorities, goals) is sent to Google's Gemini API using <strong>your own API key</strong>. Google's <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms</a> govern how Google handles that data.</li>
+    </ul>
+
+    <p class="sub" style="font-size:16px;margin-top:20px;">When you connect your Google account (optional)</p>
+    <ul class="ul">
+      <li><strong>Gmail</strong> — unread thread subjects and senders from the past 2 days are read to surface a daily email summary. Email body content is not read.</li>
+      <li><strong>Google Calendar</strong> — upcoming event titles and times are read to show your schedule in the planner.</li>
+      <li><strong>Google Tasks</strong> — your task lists are read and can be updated from the planner.</li>
+      <li><strong>Google Drive (appdata)</strong> — your planner data is backed up to a private app folder in your Drive, visible only to this extension.</li>
+    </ul>
+
+    <div class="box"><p>We never store any Google account data on our own servers. All Google API responses are used locally in your browser and discarded.</p></div>
+  </section>
+
+  <section id="c-how" class="sec">
+    <h2>How the extension works</h2>
+    <p class="sub">Local core, optional cloud features.</p>
+
+    <div class="row">
+      <div class="ill"><svg viewBox="0 0 96 96" fill="none" stroke="currentColor"
+        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="32" y="18" width="32" height="60" rx="7"/>
+        <rect x="41" y="44" width="14" height="12" rx="2.4"/>
+        <path d="M44 44v-4a4 4 0 0 1 8 0v4"/>
+      </svg></div>
+      <div>
+        <h3>Planner stored locally</h3>
+        <p>All journal entries, priorities, habits, and goals are saved in Chrome's local
+          storage on your device. They persist across sessions and are never transmitted
+          unless you explicitly use Drive backup.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="ill"><svg viewBox="0 0 96 96" fill="none" stroke="currentColor"
+        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="48" cy="42" r="18"/>
+        <path d="M48 28v14l8 8"/>
+        <path d="M30 74h36"/>
+      </svg></div>
+      <div>
+        <h3>Gemini AI (your key, your quota)</h3>
+        <p>When you trigger an AI suggestion, the relevant planner text is sent to Google's
+          Gemini API using the API key you provide in settings. Your key is stored only in
+          Chrome's local storage and is never sent to RightBonds.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="ill"><svg viewBox="0 0 96 96" fill="none" stroke="currentColor"
+        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="22" y="20" width="52" height="56" rx="6"/>
+        <path d="M37 40l-7 8 7 8M59 40l7 8-7 8"/>
+        <path d="M52 36 44 60"/>
+      </svg></div>
+      <div>
+        <h3>Google account integration (opt-in)</h3>
+        <p>Connecting your Google account authorises the extension to read Gmail, Calendar,
+          and Tasks, and to backup your planner to Drive appdata. You can disconnect at
+          any time from the extension's settings page.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="ill"><svg viewBox="0 0 96 96" fill="none" stroke="currentColor"
+        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="24" y="28" width="48" height="16" rx="4"/>
+        <rect x="24" y="52" width="48" height="16" rx="4"/>
+        <circle cx="33" cy="36" r="2" fill="currentColor" stroke="none"/>
+        <circle cx="33" cy="60" r="2" fill="currentColor" stroke="none"/>
+        <path d="M22 22 74 74"/>
+      </svg></div>
+      <div>
+        <h3>No RightBonds servers</h3>
+        <p>RightBonds operates no backend servers for this extension. We have no database,
+          no analytics pipeline, and no mechanism to receive or store your data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="c-permissions" class="sec">
+    <h2>Permissions we request</h2>
+    <p class="sub">Each permission has one purpose.</p>
+    <div class="perm">
+      <span class="code">storage</span>
+      <p>To save your planner entries, settings, and Gemini API key in Chrome's local storage on your device.</p>
+    </div>
+    <div class="perm">
+      <span class="code">identity</span>
+      <p>To authenticate with your Google account for Gmail, Calendar, Tasks, and Drive access — only when you choose to connect.</p>
+    </div>
+    <div class="perm">
+      <span class="code">sidePanel</span>
+      <p>To display the planner in Chrome's side panel alongside any web page.</p>
+    </div>
+    <div class="perm">
+      <span class="code">tabs</span>
+      <p>To open the settings page when you click the extension icon.</p>
+    </div>
+    <div class="box"><p>Gmail, Calendar, Tasks, and Drive access is granted only if you connect your Google account. You can revoke access at any time via the settings page or at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</p></div>
+  </section>
+
+  <section id="c-sharing" class="sec">
+    <h2>Sharing your information</h2>
+    <p class="sub">We share nothing. Google receives data only for the features you use.</p>
+    <p>RightBonds does not sell, rent, or share your data. The only external party that
+      receives data is Google — via the Gemini API (when you use AI features) and Google
+      APIs (when you connect your Google account). Both are governed by
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+  </section>
+
+  <section id="c-security" class="sec">
+    <h2>Keeping it secure</h2>
+    <p class="sub">No RightBonds server means no RightBonds breach.</p>
+    <p>Your planner data and API key live only in Chrome's local storage on your device.
+      Your Google OAuth token is managed by Chrome's identity system and is never stored
+      by RightBonds. By operating without a backend, we eliminate the most common source
+      of data exposure: server-side breaches.</p>
+  </section>
+
+  <section id="c-delete" class="sec">
+    <h2>Deleting your data</h2>
+    <p class="sub">Full control from the settings page.</p>
+    <div class="box line" style="margin-top:16px;">
+      <div class="ill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/>
+        <path d="M10 11v6M14 11v6"/>
+      </svg></div>
+      <div class="tx"><b>Clear local data</b>Open extension settings → clear stored planner data from Chrome's local storage.</div>
+    </div>
+    <div class="box line" style="margin-top:12px;">
+      <div class="ill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/>
+        <path d="M12 8v4l3 3"/>
+      </svg></div>
+      <div class="tx"><b>Disconnect Google</b>Open settings → Disconnect to revoke OAuth access. Or visit <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</div>
+    </div>
+    <div class="box line" style="margin-top:12px;">
+      <div class="ill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="6" width="18" height="13" rx="2"/>
+        <path d="M8 6V4h8v2"/>
+      </svg></div>
+      <div class="tx"><b>Uninstall</b>Chrome clears all local storage automatically. Drive appdata folder is deleted when you remove access or uninstall.</div>
+    </div>
+  </section>
+
+  <section id="c-children" class="sec">
+    <h2>Children's privacy</h2>
+    <p class="sub">Not directed at children under 13.</p>
+    <p>AI Planner is not intended for children under 13. We do not knowingly collect
+      information from children. If you believe a child has connected a Google account
+      through this extension, please contact us so we can assist with removal.</p>
+  </section>
+
+  <section id="c-about" class="sec">
+    <h2>About this policy</h2>
+    <p class="sub">When it applies, and how it changes.</p>
+    <p>This Privacy Policy applies to the AI Planner Chrome extension (version 1.0.0 and
+      later), published by RightBonds. It does not apply to Google's handling of your
+      data, which is governed by <a href="https://policies.google.com/privacy" target="_blank"
+      rel="noopener">Google's Privacy Policy</a>.</p>
+    <p>If we make material changes, we will update the effective date at the top of this
+      page. Continued use of the extension after changes constitutes acceptance.</p>
+  </section>
+
+  <section id="c-contact" class="sec">
+    <h2>Contact</h2>
+    <p class="sub">Questions? A human will reply.</p>
+    <p>If you have any questions about this policy or how the extension handles your data,
+      email us at <a href="mailto:rightbonds.admin@gmail.com">rightbonds.admin@gmail.com</a>.</p>
+  </section>
+
+</main>
+</div><!-- /panel-aip -->
 
 <!-- FOOTER -->
 <footer class="ftr">

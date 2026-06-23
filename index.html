@@ -616,7 +616,7 @@ strong { color: var(--ink); font-weight: 700; }
 <main class="doc">
 
   <h1 class="title">Privacy Policy</h1>
-  <p class="eff">Effective 20 June 2026<span class="s">|</span>Applies to AI Planner</p>
+  <p class="eff">Effective 23 June 2026<span class="s">|</span>Applies to AI Planner</p>
 
   <p class="intro">AI Planner is an AI-powered daily, weekly &amp; monthly planner that
     lives in your new tab and Chrome side panel. When you use optional features like
@@ -784,10 +784,47 @@ strong { color: var(--ink); font-weight: 700; }
   <section id="c-sharing" class="sec">
     <h2>Sharing your information</h2>
     <p class="sub">We share nothing. Google receives data only for the features you use.</p>
-    <p>RightBonds does not sell, rent, or share your data. The only external party that
-      receives data is Google — via the Gemini API (when you use AI features) and Google
-      APIs (when you connect your Google account). Both are governed by
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    <p>RightBonds does not sell, rent, or share your data with any person or organisation.
+      The only entities that receive data from this extension are Google services — listed
+      below by service, what is sent, and why.</p>
+
+    <div class="perm">
+      <span class="code">Gemini API</span>
+      <p>When you trigger an AI suggestion, the relevant planner text (priorities, goals,
+        schedule items) is sent to Google's Gemini API using your API key. No other data
+        is sent. Governed by <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Terms of Service</a>.</p>
+    </div>
+    <div class="perm">
+      <span class="code">Gmail API</span>
+      <p>OAuth token used to read unread thread subjects and sender names from the past
+        2 days. Email body content is never read. Used only to display an email summary
+        in the planner sidebar.</p>
+    </div>
+    <div class="perm">
+      <span class="code">Calendar API</span>
+      <p>OAuth token used to read upcoming event titles and times from your primary
+        Google Calendar. Used only to display your schedule in planner views.</p>
+    </div>
+    <div class="perm">
+      <span class="code">Tasks API</span>
+      <p>OAuth token used to read your task lists and task titles, and to update task
+        completion status. Used only to display and manage tasks within the planner.</p>
+    </div>
+    <div class="perm">
+      <span class="code">Drive API (appdata)</span>
+      <p>OAuth token and your planner data are used to read and write a single backup
+        file in a private, app-only folder on your Google Drive. This folder is invisible
+        in the Drive UI and inaccessible to any other app or person.</p>
+    </div>
+
+    <div class="box">
+      <p>All Google APIs listed above are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+        This extension's use of data received from Google APIs complies with the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+        including the Limited Use requirements. Google API data is used only to provide
+        the in-extension features described above and is not used for any secondary
+        purpose, transferred to third parties, or used for advertising.</p>
+    </div>
   </section>
 
   <section id="c-security" class="sec">
@@ -826,6 +863,12 @@ strong { color: var(--ink); font-weight: 700; }
       </svg></div>
       <div class="tx"><b>Uninstall</b>Chrome clears all local storage automatically. Drive appdata folder is deleted when you remove access or uninstall.</div>
     </div>
+    <p style="margin-top:20px;font-size:15px;">
+      <strong>Retention:</strong> Local planner data is kept until you clear it or
+      uninstall. In-memory Google API data (Gmail, Calendar, Tasks) is discarded when
+      the extension unloads — it is never written to disk. Drive backup persists until
+      you delete it or revoke Drive access.
+    </p>
   </section>
 
   <section id="c-children" class="sec">
